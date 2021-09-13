@@ -1,0 +1,136 @@
+:root {
+    background-color: rgb(29, 26, 26);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1 {
+    font-size: calc(20px + 1.5vmax);
+    color: white;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+}
+
+p {
+    font-size: calc(10px + 1vmax);
+    padding: 1.75rem 0;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.container {
+    max-width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    font-size: 1.75rem;
+    padding: 1.75rem 0;
+    width: 30rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-decoration: none;
+    color: teal;
+    background: tomato;
+    border-radius: 10px;
+}
+
+.button:hover {
+    cursor: pointer;
+    box-shadow: wheat;
+    transition: transform 150ms;
+    transform: scale(1.03);
+}
+
+.button[disabled]:hover {
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#highscore-button {
+    background: tomato;
+}
+
+#highscore-button:hover {
+    box-shadow: 0;
+}
+
+/* End page CSS */
+.end-form-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 30rem;
+}
+
+input {
+    margin-bottom: 1rem;
+    width: 20rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    border: none;
+    box-shadow: 0;
+}
+
+input::placeholder {
+    color: #aaa;
+} 
+
+#username {
+    margin-bottom: 3rem;
+    width: 100%;
+    outline: none;
+}
+
+#end-text {
+    font-size: 2.4rem;
+    color: white;
+    text-align: center;
+}
+
+#saveScoreButton {
+    border: none;
+}
+
+@media screen and (max-width: 980px) {
+
+}
+  
+@media screen and (max-width: 768px) {
+
+}

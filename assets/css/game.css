@@ -1,0 +1,89 @@
+body {
+    color: white;
+}
+
+.choice-container {
+    display: flex;
+    margin: 1rem;
+    width: 100%;
+    border-radius: 4px;
+    background: blue;
+    font-size: 3rem;
+    min-width: 0;
+}
+
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0;
+    transform: scale(1.02);
+    transition: transform 100ms;
+}
+
+.choice-prefix {
+    padding: 2rem 2.5rem;
+    color: white;
+}
+
+.choice-text {
+    padding: 2rem;
+    width: 100%;
+}
+
+.correct {
+    background: yellowgreen;
+}
+
+.incorrect {
+    background: red;
+}
+
+#game {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* HUD */
+#hud {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hud-item {
+    min-width: 0;
+}
+
+.hud-prefix {
+    text-align: center;
+    font-size: calc(12px + 1.5vmax);;
+}
+
+.hud-main-text {
+    text-align: center;
+    min-width: 0;
+}
+
+#progressBar {
+    width: 100%;
+    height: 3rem;
+    border: 0.2rem solid green;
+    margin-bottom: 5rem;
+    border-radius: 50px;
+    overflow: hidden;
+    align-items: center;
+}
+
+#progressBarFull {
+    height: 100%;
+    background: green;
+    width: 0%;
+}
+
+@media screen and (max-width: 980px) {
+
+}
+  
+@media screen and (max-width: 768px) {
+
+}
