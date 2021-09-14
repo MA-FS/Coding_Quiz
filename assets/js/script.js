@@ -106,7 +106,7 @@ getNewQuestion = () => {
     if(availableQuestions.length === 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem("mostRecentScore", score)
 
-        return window.location.assign("/end.html")
+        return window.location.assign("./end.html")
     }
 
     // Increment the questionCounter by 1 each time a new question is asked
@@ -141,7 +141,7 @@ timer = () => {
       timerText.innerText = timeLeft
     // End the game if timer reaches 0
       if(timeLeft <= 0) {
-        return window.location.assign("/end.html")
+        return window.location.assign("./end.html")
       } 
 
     }, 1000)
@@ -169,12 +169,16 @@ choices.forEach(choice => {
                 decrementScore(INCORRECT_SCORE_POINTS),
                 penaliseTime(TIMER_PENALTY),
                 selectedChoice.innerText = "Wrong!" 
-        // Apply css class to the parent element  
-        selectedChoice.parentElement.classList.add(classToApply)
+        // Apply css class to required element s 
+        selectedChoice.parentElement.classList.add(classToApply),
+        selectedChoice.classList.add(classToApply),
+        selectedChoice.previousElementSibling.classList.add(classToApply)
         
         // Return to default class after 1000ms
         setTimeout(() =>{
-            selectedChoice.parentElement.classList.remove(classToApply)
+            selectedChoice.parentElement.classList.remove(classToApply),
+            selectedChoice.classList.remove(classToApply),
+            selectedChoice.previousElementSibling.classList.remove(classToApply)
             getNewQuestion()
             window.scrollTo(0,0)
         }, 1000)
