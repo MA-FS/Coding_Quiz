@@ -8,20 +8,23 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <div id="end" class="flex-center flex-column">
-            <h1>You Scored:</h1>
+    <section class="container">
+        <article id="end" class="flex-center flex-column">
+            <h1>Finished!
+                <br><br>  
+                You Scored:</h1>
             <h1 id="finalscore">0</h1>
             <form class="end-form-container">
-                <h2 class="" id="end-text">Enter your name below!</h2>
-                <input type="text" name="name" id="username" placeholder="Enter Your Name">
+                <h2 class="" id="end-text">Enter your initials below!</h2>
+                <!-- Restrict input characters to letters only with a max length of 2 characters-->
+                <input type="text" name="name" id="username" placeholder="EG" maxlength="2" onkeypress="return /[a-z]/i.test(event.key)">
                 <button class="button" id="saveScoreButton" type="submit" onClick="saveHighScore(event)" disabled>Save</button>
             </form>
             <a href="/game.html" class="button">Play Again</a>
             <a href="/" class="button">Go Home</a>
             <a href="/highscores.html" id="highscore-button" class="button">High Scores</a>
-        </div>
-    </div>
+        </article>
+    </section>
 </body>
 
 <script src="/assets/js/end.js"></script>

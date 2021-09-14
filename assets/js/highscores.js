@@ -5,7 +5,7 @@ const clearButton = document.querySelector("#reset-button")
 // Map highScores and add them to listem item highScoresList
 highScoresList.innerHTML = 
 highScores.map(score => {
-    return `<li class="high-score">${score.name} - ${score.score}</li>`
+    return `<li class="high-score">${score.score} - ${score.name}</li>`
 }).join("")
 // Clear high scores list when the clearButton is pressed
 clearButton.addEventListener("click", function() {

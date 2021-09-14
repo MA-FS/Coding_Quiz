@@ -17,36 +17,67 @@ let availableQuestions = []
 // Create an object containing the questions to be asked
 let questions = [
     {
-        question: "What is 2+2",
-        choice1: "2",
-        choice2: "44",
-        choice3: "4",
-        choice4: "124",
+        question: "Who invented JavaScript?",
+        choice1: "Tim Berners-Lee",
+        choice2: "Adam Sandler",
+        choice3: "Brendan Eich",
+        choice4: "Bjarne Stroustrup",
         answer: 3,
     },
     {
-        question: 
-        "What is the answer to the second question?",
-        choice1: "2",
-        choice2: "44",
-        choice3: "4",
-        choice4: "124",
+        question: "Which one of these is a JavaScript package manager?",
+        choice1: "npm",
+        choice2: "Node.js",
+        choice3: "TypeScript",
+        choice4: "C++",
         answer: 1,
     },
     {
-        question: "What is THIS answer",
-        choice1: "2",
-        choice2: "44",
-        choice3: "THIS",
-        choice4: "124",
+        question: "Which tool can you use to ensure code quality?",
+        choice1: "Angular",
+        choice2: "jQuery",
+        choice3: "ESLint",
+        choice4: "RequireJS",
         answer: 3,
     },
     {
-        question: "What is after Boop?",
-        choice1: "2",
-        choice2: "44",
-        choice3: "4",
-        choice4: "The Snoot!",
+        question: "JavaScript File Has An Extension of:",
+        choice1: ".exe",
+        choice2: ".css",
+        choice3: ".html",
+        choice4: ".js",
+        answer: 4,
+    },
+    {
+        question: "If Button is clicked ______ Event Handler is invoked.",
+        choice1: "OnLoad()",
+        choice2: "Onclick()",
+        choice3: "OnSubmit()",
+        choice4: "KeyUp()",
+        answer: 2,
+    },
+    {
+        question: "GetMonth() returns The Month as:",
+        choice1: "Int",
+        choice2: "Float",
+        choice3: "Char",
+        choice4: "String",
+        answer: 1,
+    },
+    {
+        question: "Which of the dialog box's display a message and a data entry field?",
+        choice1: "Alert()",
+        choice2: "Prompt()",
+        choice3: "Msg()",
+        choice4: "Confirm()",
+        answer: 2,
+    },
+    {
+        question: "What function is used to parse a String to Int?",
+        choice1: "Parse.Int",
+        choice2: "Array.push",
+        choice3: "None",
+        choice4: "Int.Parse",
         answer: 4,
     }
 ]
@@ -58,13 +89,14 @@ const INCORRECT_SCORE_POINTS = 30
 // Set the amount of time to deduct from the timer on incorrect answers in seconds
 const TIMER_PENALTY = 10
 // Set the maximum number of questions
-const MAX_QUESTIONS = 4
+const MAX_QUESTIONS = 8
 
 // Define the startGame function. Reset counters and source available questions
 startGame = () => {
     questionCounter = 0
     score = 0
     availableQuestions = [...questions]
+    localStorage.setItem("mostRecentScore", 0)
     getNewQuestion()
 }
 
@@ -144,10 +176,10 @@ choices.forEach(choice => {
         setTimeout(() =>{
             selectedChoice.parentElement.classList.remove(classToApply)
             getNewQuestion()
-    
+            window.scrollTo(0,0)
         }, 1000)
-    })
-  
+        
+    }) 
 })
 // penaliseTime function to remove time from timeLeft
 penaliseTime = num => {
@@ -157,11 +189,13 @@ penaliseTime = num => {
 incrementScore = num => {
     score +=num
     scoreText.innerText = score
+    localStorage.setItem("mostRecentScore", score)
 }
 // decrementScore function to remove number to score
 decrementScore = num => {
     score -=num
     scoreText.innerText = score
+    localStorage.setItem("mostRecentScore", score)
 }
 // Run timer function on page load
 timer()

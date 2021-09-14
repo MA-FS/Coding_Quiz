@@ -10,53 +10,56 @@
 </head>
 
 <body>
-    <div class="container">
+    <section class="container">
         <div id="game" class="justify-center flex-column">
-            <div id="hud">
-                <div class="hud-item">
-                    <p id="progressText" class="hud-prefix">
+            <section id="hud">
+                <article class="hud-item">
+                    <h1 id="progressText" class="hud-prefix">
                         Question
-                    </p>
+                    </h1>
                     <div id="progressBar">
                         <div id="progressBarFull"></div>
                     </div>
-                </div>
-                <div class="hud-item">
-                    <p class="hud-prefix">
+                    
+                </article>
+                <article class="hud-item">
+                    <h1 class="hud-prefix">
                         Score
-                    </p>
-                    <h1 class="hud-main-text" id="score">
+                    </h1>
+                    <h2 class="hud-main-text" id="score">
                         0
-                    </h1>
-                </div>
-                <div class="hud-item">
-                    <p class="hud-prefix">
+                    </h2>
+                </article>
+                <article class="hud-item">
+                    <h1 class="hud-prefix">
                         Timer
-                    </p>
-                    <h1 class="hud-main-text" id="timer">
-                        75
                     </h1>
-                </div>
-            </div>
+                    <h2 class="hud-main-text" id="timer">
+                        75
+                    </h2>
+                </article>
+            </section>
             <h1 id="question">What is the answer?</h1>
-            <div class="choice-container">
-                <p class="choice-prefix">A</p>
-                <p class="choice-text" data-number="1">This is your first option</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-prefix">B</p>
-                <p class="choice-text" data-number="2">This is your second option</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-prefix">C</p>
-                <p class="choice-text" data-number="3">This is your third option</p>
-            </div>
-            <div class="choice-container">
-                <p class="choice-prefix">D</p>
-                <p class="choice-text" data-number="4">This is your fourth option</p>
-            </div>
+            <section class="multiple-choice-container">
+                <div class="choice-container">
+                    <p class="choice-prefix">A.</p>
+                    <p class="choice-text" data-number="1">This is your first option</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-prefix">B.</p>
+                    <p class="choice-text" data-number="2">This is your second option</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-prefix">C.</p>
+                    <p class="choice-text" data-number="3">This is your third option</p>
+                </div>
+                <div class="choice-container">
+                    <p class="choice-prefix">D.</p>
+                    <p class="choice-text" data-number="4">This is your fourth option</p>
+                </div>
+            </section>
         </div>
-    </div>
+    </section>
 </body>
 
 <script src="/assets/js/script.js"></script>

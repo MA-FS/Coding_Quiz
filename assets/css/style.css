@@ -1,5 +1,7 @@
 :root {
-    background-color: rgb(29, 26, 26);
+    --primary: #3d087b;
+    --dark: #11052c;
+    --light: #f43b86;
 }
 
 * {
@@ -9,29 +11,39 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+html { 
+    background: url(/assets/images/background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 h1 {
-    font-size: calc(20px + 1.5vmax);
-    color: white;
+    font-size: calc(22px + 2vmax);
+    color: var(--light);
     margin-bottom: 4rem;
     text-align: center;
+    text-shadow: 2px 2px 2px var(--dark);
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: calc(20px + 1.5vmax);
+    color: var(--light);
     margin-bottom: 4rem;
+    text-shadow: 2px 2px 4px var(--dark);
 }
 
 p {
-    font-size: calc(10px + 1vmax);
+    font-size: calc(10px + 2vmax);
     padding: 1.75rem 0;
     text-align: center;
     margin-bottom: 1rem;
+    color: var(--light);
+    text-shadow: 1px 1px 2px var(--dark);
 }
 .container {
-    max-width:50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15px;
+    margin: 25px;
 }
 
 .flex-column {
@@ -59,18 +71,18 @@ p {
 .button {
     font-size: 1.75rem;
     padding: 1.75rem 0;
-    width: 30rem;
+    width: calc(50px + 30vmax);
     text-align: center;
     margin-bottom: 1rem;
     text-decoration: none;
-    color: teal;
-    background: tomato;
+    color: var(--light);
+    background: var(--dark);
     border-radius: 10px;
+    box-shadow: 4px 4px 6px 5px var(--dark);
 }
 
 .button:hover {
     cursor: pointer;
-    box-shadow: wheat;
     transition: transform 150ms;
     transform: scale(1.03);
 }
@@ -81,30 +93,20 @@ p {
     transform: none;
 }
 
-#highscore-button {
-    background: tomato;
-}
-
-#highscore-button:hover {
-    box-shadow: 0;
-}
-
 /* End page CSS */
 .end-form-container {
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 30rem;
 }
 
 input {
     margin-bottom: 1rem;
-    width: 20rem;
+    width: calc(100px + 30vmax);
     padding: 1.5rem;
     font-size: 1.8rem;
     border: none;
-    box-shadow: 0;
+    box-shadow: 5px 5px 15px 5px var(--dark);
 }
 
 input::placeholder {
@@ -119,18 +121,17 @@ input::placeholder {
 
 #end-text {
     font-size: 2.4rem;
-    color: white;
+    color: var(--light);
     text-align: center;
 }
 
 #saveScoreButton {
     border: none;
 }
-
-@media screen and (max-width: 980px) {
-
-}
   
 @media screen and (max-width: 768px) {
-
+    .container {
+        margin-left: 45px;
+        margin-right: 45px;
+    }
 }
